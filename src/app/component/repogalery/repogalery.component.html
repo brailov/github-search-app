@@ -1,0 +1,17 @@
+<div class="repo-galery-container">
+    @for (item of items; track $index) {
+    <mat-card class="repo-card">
+      <img mat-card-image [src]="item.avatarUrl" alt="{{ item.name }}" />
+      <mat-card-header>
+        <mat-card-title>{{ item.name }}</mat-card-title>       
+      </mat-card-header>
+      <mat-card-content>      
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addToUserSavedBookmarks(item)" [disabled]="HideSavedBookmarks">
+          Add to Bookmarks
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    }
+  </div>
